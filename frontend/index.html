@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockPilot AI | Akıllı KOBİ Asistanı</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        <div>
+          <h1>StockPilot AI</h1>
+          <p>Akıllı KOBİ Asistanı</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="active">Dashboard</a>
+        <a>Siparişler</a>
+        <a>Stok</a>
+        <a>Uyarılar</a>
+        <a>AI Asistan</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2>Operasyon Paneli</h2>
+          <p>KOBİ ve kooperatifler için AI destekli günlük iş takibi</p>
+        </div>
+        <span class="status-badge">Backend Aktif</span>
+      </header>
+
+      <section class="summary-grid">
+        <div class="summary-card">
+          <p>Toplam Sipariş</p>
+          <h3 id="totalOrders">-</h3>
+        </div>
+        <div class="summary-card">
+          <p>Kritik Stok</p>
+          <h3 id="lowStockCount">-</h3>
+        </div>
+        <div class="summary-card">
+          <p>Geciken Kargo</p>
+          <h3 id="delayedOrders">-</h3>
+        </div>
+        <div class="summary-card">
+          <p>Tahmini Gelir</p>
+          <h3 id="estimatedRevenue">-</h3>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="left-column">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Siparişler</h3>
+              <span>Canlı veri</span>
+            </div>
+            <div id="ordersList" class="list"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Stok Durumu</h3>
+              <span>Kritik eşik kontrolü</span>
+            </div>
+            <div id="stockList" class="list"></div>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="panel alert-panel">
+            <div class="panel-header">
+              <h3>Akıllı Uyarılar</h3>
+              <span>Otomatik</span>
+            </div>
+            <div id="alertsList" class="list"></div>
+          </div>
+
+          <div class="panel chat-panel">
+            <div class="panel-header">
+              <h3>AI Müşteri Asistanı</h3>
+              <span>Gemini destekli</span>
+            </div>
+
+            <div id="chatMessages" class="chat-messages">
+              <div class="bot-message">
+                Merhaba, müşteri mesajını yaz. Sipariş, stok veya kargo bilgisini kontrol edip cevap taslağı oluşturayım.
+              </div>
+            </div>
+
+            <div class="chat-input">
+              <input
+                id="chatInput"
+                type="text"
+                placeholder="Örn: 128 numaralı siparişim nerede?"
+              />
+              <button id="sendButton">Gönder</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel daily-summary">
+        <h3>Günlük AI Operasyon Özeti</h3>
+        <p id="dailySummary">Yükleniyor...</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
