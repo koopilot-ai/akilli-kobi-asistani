@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StockPilot AI | Akıllı KOBİ Asistanı</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        <div>
+          <h1>StockPilot AI</h1>
+          <p>Akıllı KOBİ Asistanı</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="nav-link active" data-page="dashboard">
+          <span class="nav-icon">⊞</span> Dashboard
+        </a>
+        <a class="nav-link" data-page="siparisler">
+          <span class="nav-icon">📦</span> Siparişler
+        </a>
+        <a class="nav-link" data-page="stok">
+          <span class="nav-icon">📊</span> Stok
+        </a>
+        <a class="nav-link" data-page="uyarilar">
+          <span class="nav-icon">🔔</span> Uyarılar
+        </a>
+        <a class="nav-link" data-page="ai-asistan">
+          <span class="nav-icon">✨</span> AI Asistan
+        </a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h2 id="pageTitle">Operasyon Paneli</h2>
+          <p id="pageSubtitle">KOBİ ve kooperatifler için AI destekli günlük iş takibi</p>
+        </div>
+        <span class="status-badge">
+           <span class="pulse-dot"></span> Backend Aktif
+        </span>
+      </header>
+
+       <!-- ====== SAYFA 1: DASHBOARD ====== -->
+      <div class="page active" id="page-dashboard">
+
+      <section class="summary-grid">
+        <div class="summary-card">
+          <p>Toplam Sipariş</p>
+          <h3 id="totalOrders">-</h3>
+        </div>
+        <div class="summary-card">
+          <p>Kritik Stok</p>
+          <h3 id="lowStockCount">-</h3>
+        </div>
+        <div class="summary-card">
+          <p>Geciken Kargo</p>
+          <h3 id="delayedOrders">-</h3>
+        </div>
+        <div class="summary-card">
+          <p>Tahmini Gelir</p>
+          <h3 id="estimatedRevenue">-</h3>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <div class="left-column">
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Siparişler</h3>
+              <span>Canlı veri</span>
+            </div>
+            <div id="ordersList" class="list"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header">
+              <h3>Stok Durumu</h3>
+              <span>Kritik eşik kontrolü</span>
+            </div>
+            <div id="stockList" class="list"></div>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="panel alert-panel">
+            <div class="panel-header">
+              <h3>Akıllı Uyarılar</h3>
+              <span>Otomatik</span>
+            </div>
+            <div id="alertsList" class="list"></div>
+          </div>
+
+          <div class="panel chat-panel">
+            <div class="panel-header">
+              <h3>AI Müşteri Asistanı</h3>
+              <span>Gemini destekli</span>
+            </div>
+
+            <div id="chatMessages" class="chat-messages">
+              <div class="bot-message">
+                Merhaba, müşteri mesajını yaz. Sipariş, stok veya kargo bilgisini kontrol edip cevap taslağı oluşturayım.
+              </div>
+            </div>
+
+            <div class="chat-input">
+              <input
+                id="chatInput"
+                type="text"
+                placeholder="Örn: 128 numaralı siparişim nerede?"
+              />
+              <button id="sendButton">Gönder</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel daily-summary">
+        <h3>Günlük AI Operasyon Özeti</h3>
+        <p id="dailySummary">Yükleniyor...</p>
+      </section>
+      
+
+
+      
+      </div>
+      <!-- /page-dashboard -->
+ 
+ 
+      <!-- ====== SAYFA 2: SİPARİŞLER ====== -->
+      <div class="page" id="page-siparisler">
+        <div class="panel full-panel">
+          <div class="panel-header">
+            <h3>📦 Tüm Siparişler</h3>
+            <span class="tag">Canlı veri</span>
+          </div>
+          <div id="ordersListFull" class="list grid-list"></div>
+        </div>
+      </div>
+ 
+ 
+      <!-- ====== SAYFA 3: STOK ====== -->
+      <div class="page" id="page-stok">
+        <div class="panel full-panel">
+          <div class="panel-header">
+            <h3>📊 Stok Yönetimi</h3>
+            <span class="tag">Kritik eşik kontrolü</span>
+          </div>
+          <div id="stockListFull" class="list grid-list"></div>
+        </div>
+      </div>
+ 
+ 
+      <!-- ====== SAYFA 4: UYARILAR ====== -->
+      <div class="page" id="page-uyarilar">
+        <div class="panel full-panel">
+          <div class="panel-header">
+            <h3>🔔 Akıllı Uyarılar</h3>
+            <span class="tag">Otomatik</span>
+          </div>
+          <div id="alertsListFull" class="list grid-list"></div>
+        </div>
+      </div>
+ 
+ 
+      <!-- ====== SAYFA 5: AI ASISTAN ====== -->
+      <div class="page" id="page-ai-asistan">
+        <div class="panel full-chat-panel">
+          <div class="panel-header">
+            <h3>✨ AI Müşteri Asistanı</h3>
+            <span class="tag">Gemini destekli</span>
+          </div>
+          <div id="chatMessagesFull" class="chat-messages chat-messages-tall">
+            <div class="bot-message">
+              Merhaba! Ben StockPilot AI Asistanı. Siparişler, stok durumu veya kargo bilgileri hakkında sana yardımcı olabilirim.
+            </div>
+          </div>
+          <div class="chat-input">
+            <input id="chatInputFull" type="text" placeholder="Örn: Kritik stokları listele, geciken siparişler hangileri?" />
+            <button id="sendButtonFull">Gönder</button>
+          </div>
+        </div>
+      </div>
+
+
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

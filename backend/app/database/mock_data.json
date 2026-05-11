@@ -1,0 +1,75 @@
+{
+  "orders": [
+    {
+      "id": "128",
+      "customer_name": "Ayşe Yılmaz",
+      "customer_phone": "0555 111 22 33",
+      "product": "Organik Zeytinyağı",
+      "quantity": 2,
+      "status": "Kargoda",
+      "cargo_status": "Dağıtım şubesinde bekliyor",
+      "estimated_delivery": "12 Mayıs 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "129",
+      "customer_name": "Mehmet Demir",
+      "customer_phone": "0555 222 33 44",
+      "product": "Domates Salçası",
+      "quantity": 4,
+      "status": "Hazırlanıyor",
+      "cargo_status": "Henüz kargoya verilmedi",
+      "estimated_delivery": "13 Mayıs 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "130",
+      "customer_name": "Zeynep Kaya",
+      "customer_phone": "0555 333 44 55",
+      "product": "El Yapımı Sabun",
+      "quantity": 3,
+      "status": "Gecikti",
+      "cargo_status": "Kargo transfer merkezinde gecikme var",
+      "estimated_delivery": "Gecikmeli teslimat",
+      "payment_status": "Ödendi"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "name": "Organik Zeytinyağı",
+      "stock": 18,
+      "critical_level": 10,
+      "unit": "adet",
+      "last_30_days_sales": 42
+    },
+    {
+      "id": "p2",
+      "name": "Domates Salçası",
+      "stock": 8,
+      "critical_level": 15,
+      "unit": "adet",
+      "last_30_days_sales": 65
+    },
+    {
+      "id": "p3",
+      "name": "El Yapımı Sabun",
+      "stock": 5,
+      "critical_level": 10,
+      "unit": "adet",
+      "last_30_days_sales": 31
+    }
+  ],
+  "messages": [
+    {
+      "id": "m1",
+      "customer_name": "Ayşe Yılmaz",
+      "message": "128 numaralı siparişim nerede?"
+    },
+    {
+      "id": "m2",
+      "customer_name": "Mehmet Demir",
+      "message": "Domates salçası stokta var mı?"
+    }
+  ]
+}
