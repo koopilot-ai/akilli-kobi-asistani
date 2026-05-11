@@ -1,5 +1,6 @@
 from app.services.order_service import get_all_orders, get_delayed_orders
 from app.services.stock_service import get_all_products, get_low_stock_products
+from app.services.simulation_service import generate_simulated_trends
 
 
 def get_dashboard_summary() -> dict:
@@ -20,6 +21,9 @@ def get_dashboard_summary() -> dict:
     for order in orders:
         estimated_revenue += order.get("quantity", 0) * 250
 
+    # Demo için simüle edilmiş trend verilerini ekle
+    simulated_trends = generate_simulated_trends(7)
+
     return {
         "total_orders": total_orders,
         "total_products": total_products,
@@ -30,5 +34,6 @@ def get_dashboard_summary() -> dict:
             f"Bugün toplam {total_orders} sipariş işlendi. "
             f"{total_delayed} geciken kargo ve "
             f"{total_low_stock} kritik stok uyarısı bulunuyor."
-        )
+        ),
+        "weekly_trend_simulation": simulated_trends # Demo grafikleri için yeni alan
     }

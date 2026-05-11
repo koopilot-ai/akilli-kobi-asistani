@@ -32,6 +32,226 @@
       "cargo_status": "Kargo transfer merkezinde gecikme var",
       "estimated_delivery": "Gecikmeli teslimat",
       "payment_status": "Ödendi"
+    },
+    {
+      "id": "131",
+      "customer_name": "Berat Koç",
+      "customer_phone": "0555 793 44 64",
+      "product": "Organik Zeytinyağı",
+      "quantity": 5,
+      "status": "Gecikti",
+      "cargo_status": "Şubede",
+      "estimated_delivery": "14 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "132",
+      "customer_name": "Berat Koç",
+      "customer_phone": "0555 211 88 71",
+      "product": "Sızma Zeytinyağı",
+      "quantity": 2,
+      "status": "Teslim Edildi",
+      "cargo_status": "Dağıtımda",
+      "estimated_delivery": "14 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "133",
+      "customer_name": "Fatma Nur",
+      "customer_phone": "0555 194 87 12",
+      "product": "Ev Yapımı Tarhana",
+      "quantity": 1,
+      "status": "Teslim Edildi",
+      "cargo_status": "Şubede",
+      "estimated_delivery": "15 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "134",
+      "customer_name": "Fatma Nur",
+      "customer_phone": "0555 947 48 61",
+      "product": "Doğal Bal",
+      "quantity": 3,
+      "status": "Gecikti",
+      "cargo_status": "Şubede",
+      "estimated_delivery": "15 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "135",
+      "customer_name": "Fatma Nur",
+      "customer_phone": "0555 831 99 72",
+      "product": "Organik Zeytinyağı",
+      "quantity": 2,
+      "status": "Gecikti",
+      "cargo_status": "Gecikmeli",
+      "estimated_delivery": "13 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "136",
+      "customer_name": "Ali Veli",
+      "customer_phone": "0555 445 60 68",
+      "product": "Domates Salçası",
+      "quantity": 4,
+      "status": "Hazırlanıyor",
+      "cargo_status": "Gecikmeli",
+      "estimated_delivery": "16 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "137",
+      "customer_name": "Merve Su",
+      "customer_phone": "0555 864 63 14",
+      "product": "Köy Yumurtası",
+      "quantity": 4,
+      "status": "Hazırlanıyor",
+      "cargo_status": "Şubede",
+      "estimated_delivery": "12 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "138",
+      "customer_name": "Selin Hanım",
+      "customer_phone": "0555 808 52 97",
+      "product": "Köy Yumurtası",
+      "quantity": 1,
+      "status": "Teslim Edildi",
+      "cargo_status": "Yolda",
+      "estimated_delivery": "15 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "139",
+      "customer_name": "Hasan Can",
+      "customer_phone": "0555 869 56 49",
+      "product": "Domates Salçası",
+      "quantity": 3,
+      "status": "Hazırlanıyor",
+      "cargo_status": "Şubede",
+      "estimated_delivery": "15 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "140",
+      "customer_name": "Fatma Nur",
+      "customer_phone": "0555 520 57 98",
+      "product": "Sızma Zeytinyağı",
+      "quantity": 2,
+      "status": "Kargoda",
+      "cargo_status": "Şubede",
+      "estimated_delivery": "15 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "141",
+      "customer_name": "Hasan Can",
+      "customer_phone": "0555 197 41 61",
+      "product": "Domates Salçası",
+      "quantity": 1,
+      "status": "Kargoda",
+      "cargo_status": "Gecikmeli",
+      "estimated_delivery": "13 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "142",
+      "customer_name": "Kemal Bey",
+      "customer_phone": "0555 550 92 75",
+      "product": "El Yapımı Sabun",
+      "quantity": 1,
+      "status": "Teslim Edildi",
+      "cargo_status": "Yolda",
+      "estimated_delivery": "16 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "143",
+      "customer_name": "Hasan Can",
+      "customer_phone": "0555 743 96 18",
+      "product": "Doğal Bal",
+      "quantity": 1,
+      "status": "Hazırlanıyor",
+      "cargo_status": "Şubede",
+      "estimated_delivery": "12 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "144",
+      "customer_name": "Merve Su",
+      "customer_phone": "0555 764 71 54",
+      "product": "Organik Zeytinyağı",
+      "quantity": 1,
+      "status": "Kargoda",
+      "cargo_status": "Yolda",
+      "estimated_delivery": "14 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "145",
+      "customer_name": "Hasan Can",
+      "customer_phone": "0555 785 18 27",
+      "product": "Köy Yumurtası",
+      "quantity": 3,
+      "status": "Hazırlanıyor",
+      "cargo_status": "Gecikmeli",
+      "estimated_delivery": "12 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "146",
+      "customer_name": "Selin Hanım",
+      "customer_phone": "0555 339 89 57",
+      "product": "Domates Salçası",
+      "quantity": 3,
+      "status": "Teslim Edildi",
+      "cargo_status": "Şubede",
+      "estimated_delivery": "15 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "147",
+      "customer_name": "Fatma Nur",
+      "customer_phone": "0555 723 97 82",
+      "product": "Sızma Zeytinyağı",
+      "quantity": 5,
+      "status": "Gecikti",
+      "cargo_status": "Yolda",
+      "estimated_delivery": "14 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "148",
+      "customer_name": "Fatma Nur",
+      "customer_phone": "0555 513 91 95",
+      "product": "Organik Zeytinyağı",
+      "quantity": 5,
+      "status": "Kargoda",
+      "cargo_status": "Dağıtımda",
+      "estimated_delivery": "14 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "149",
+      "customer_name": "Fatma Nur",
+      "customer_phone": "0555 909 76 47",
+      "product": "Sızma Zeytinyağı",
+      "quantity": 3,
+      "status": "Hazırlanıyor",
+      "cargo_status": "Dağıtımda",
+      "estimated_delivery": "13 May 2026",
+      "payment_status": "Ödendi"
+    },
+    {
+      "id": "150",
+      "customer_name": "Berat Koç",
+      "customer_phone": "0555 918 76 75",
+      "product": "Domates Salçası",
+      "quantity": 5,
+      "status": "Kargoda",
+      "cargo_status": "Yolda",
+      "estimated_delivery": "12 May 2026",
+      "payment_status": "Ödendi"
     }
   ],
   "products": [
@@ -58,6 +278,38 @@
       "critical_level": 10,
       "unit": "adet",
       "last_30_days_sales": 31
+    },
+    {
+      "id": "p4",
+      "name": "Doğal Bal",
+      "stock": 14,
+      "critical_level": 15,
+      "unit": "kavanoz",
+      "last_30_days_sales": 49
+    },
+    {
+      "id": "p5",
+      "name": "Köy Yumurtası",
+      "stock": 28,
+      "critical_level": 15,
+      "unit": "koli",
+      "last_30_days_sales": 25
+    },
+    {
+      "id": "p6",
+      "name": "Ev Yapımı Tarhana",
+      "stock": 11,
+      "critical_level": 15,
+      "unit": "paket",
+      "last_30_days_sales": 43
+    },
+    {
+      "id": "p7",
+      "name": "Sızma Zeytinyağı",
+      "stock": 15,
+      "critical_level": 15,
+      "unit": "litre",
+      "last_30_days_sales": 67
     }
   ],
   "messages": [

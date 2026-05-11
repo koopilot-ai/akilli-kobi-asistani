@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import APP_NAME
-from app.routes import orders, stock, alerts, analytics, chat
+from app.routes import orders, stock, alerts, analytics, chat, asist_logic
 
 app = FastAPI(
     title=APP_NAME,
@@ -32,3 +32,4 @@ app.include_router(stock.router)
 app.include_router(alerts.router)
 app.include_router(analytics.router)
 app.include_router(chat.router)
+app.include_router(asist_logic.router) # Yeni AI özellikleri router'ı
