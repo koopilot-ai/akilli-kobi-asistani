@@ -32,4 +32,4 @@ app.include_router(stock.router)
 app.include_router(alerts.router)
 app.include_router(analytics.router)
 app.include_router(chat.router)
-app.include_router(asist_logic.router) # Yeni AI özellikleri router'ı
+app.include_router(asist_logic.router)

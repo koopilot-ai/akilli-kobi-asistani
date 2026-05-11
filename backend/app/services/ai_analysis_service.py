@@ -1,9 +1,6 @@
 from app.services.llm_service import generate_gemini_response
 
 def analyze_customer_sentiment(message: str) -> dict:
-    """
-    Müşteri mesajından duygu analizi ve talep önceliği çıkarır.
-    """
     prompt = f"""
     Aşağıdaki müşteri mesajını analiz et:
     "{message}"
@@ -17,12 +14,7 @@ def analyze_customer_sentiment(message: str) -> dict:
 
     response = generate_gemini_response(prompt)
     
-    # Not: Gerçek uygulamada JSON parsing yapılacak. 
-    # Mock olarak basit bir mantık veya Gemini cevabı dönebilir.
-    # Şimdilik Gemini cevabını döndürelim veya hata durumunda fallback yapalım.
-    
     try:
-        # Basit bir simülasyon (Gemini kapalıysa veya hata verirse)
         if not response:
             message_lower = message.lower()
             sentiment = "nötr"
@@ -42,7 +34,6 @@ def analyze_customer_sentiment(message: str) -> dict:
                 "main_intent": "genel_bilgi"
             }
         
-        # Basit string temizleme (eğer Gemini JSON dışında metin dönerse)
         import json
         import re
         json_match = re.search(r'\{.*\}', response, re.DOTALL)
@@ -54,12 +45,8 @@ def analyze_customer_sentiment(message: str) -> dict:
         return {"status": "analiz_yapilamadi", "sentiment": "nötr"}
 
 def get_demand_priority_report(orders: list) -> list:
-    """
-    Sipariş listesini analiz ederek talep önceliği raporu oluşturur.
-    """
     report = []
     for order in orders:
-        # Geciken veya kritik durumdaki siparişlere yüksek öncelik ver
         priority = "Normal"
         if order.get("status") == "Gecikti":
             priority = "Acil"

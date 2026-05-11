@@ -3,9 +3,6 @@ from datetime import datetime, timedelta
 from app.database.db import load_data, save_data
 
 def generate_simulated_trends(days: int = 30) -> list:
-    """
-    Demo için geçmişe yönelik simüle edilmiş satış trend verileri üretir.
-    """
     trends = []
     base_sales = 10
     
@@ -14,9 +11,8 @@ def generate_simulated_trends(days: int = 30) -> list:
     for i in range(days):
         date = (current_date - timedelta(days=days-i)).strftime("%Y-%m-%d")
         
-        # Rastgele dalgalanma (hafif artış trendi ile)
         volatility = random.uniform(0.8, 1.2)
-        growth_factor = 1 + (i / 100) # Zamanla hafif artış
+        growth_factor = 1 + (i / 100)
         
         daily_sales = int(base_sales * volatility * growth_factor + random.randint(0, 5))
         
@@ -30,9 +26,6 @@ def generate_simulated_trends(days: int = 30) -> list:
     return trends
 
 def seed_mock_data(count: int = 20):
-    """
-    Sisteme rastgele örnek siparişler ve ürünler ekleyerek veri hacmini artırır.
-    """
     data = load_data()
     
     customers = ["Ali Veli", "Fatma Nur", "Hasan Can", "Merve Su", "Kemal Bey", "Selin Hanım", "Berat Koç"]
@@ -43,7 +36,6 @@ def seed_mock_data(count: int = 20):
         {"name": "Sızma Zeytinyağı", "unit": "litre", "price": 600}
     ]
     
-    # Yeni ürünleri ekle (eğer yoksa)
     existing_product_names = [p["name"] for p in data["products"]]
     for p_info in products_pool:
         if p_info["name"] not in existing_product_names:
@@ -57,7 +49,6 @@ def seed_mock_data(count: int = 20):
                 "last_30_days_sales": random.randint(20, 100)
             })
 
-    # Yeni siparişler ekle
     start_id = int(data["orders"][-1]["id"]) + 1 if data["orders"] else 100
     statuses = ["Kargoda", "Hazırlanıyor", "Teslim Edildi", "Gecikti"]
     cargo_statuses = ["Yolda", "Dağıtımda", "Şubede", "Gecikmeli"]
@@ -80,9 +71,6 @@ def seed_mock_data(count: int = 20):
     return {"message": f"{count} yeni sipariş ve yeni ürünler başarıyla eklendi."}
 
 def get_forecast_summary() -> dict:
-    """
-    Simüle edilmiş veriler üzerinden gelecek 7 gün için tahmin sunar.
-    """
     trends = generate_simulated_trends(7)
     total_forecast_sales = sum(t["sales"] for t in trends)
     

@@ -1,9 +1,6 @@
 from app.services.stock_service import get_all_products
 
 def get_smart_recommendations() -> dict:
-    """
-    Stok verilerini analiz ederek kritik stok ve fırsat ürünleri önerileri sunar.
-    """
     products = get_all_products()
     
     critical_alerts = []
@@ -14,7 +11,6 @@ def get_smart_recommendations() -> dict:
         critical = product.get("critical_level", 0)
         sales_30 = product.get("last_30_days_sales", 0)
         
-        # Kritik Stok Analizi
         if stock <= critical:
             urgency = "Yüksek" if stock <= (critical / 2) else "Orta"
             critical_alerts.append({
@@ -25,8 +21,7 @@ def get_smart_recommendations() -> dict:
                 "suggestion": f"{critical * 2} birim tedarik planlanmalı."
             })
             
-        # Fırsat Ürün Analizi (Yüksek satış hızı, yeterli stok veya stok bitmek üzere)
-        if sales_30 > 50: # Örnek eşik
+        if sales_30 > 50:
             if stock > critical:
                 opportunities.append({
                     "product_name": product.get("name"),
